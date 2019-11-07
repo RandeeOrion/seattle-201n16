@@ -10,13 +10,13 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sum(a, b) { 
     var addition = a+b;
-    var sent = 'The sum of ' + a + ' and ' + b + ' is ' + addition + '.';
-    var array = [addition, sent];
-    return array;
+    // var sent = 'The sum of ' + a + ' and ' + b + ' is ' + addition + '.';
+    // var array = [addition, sent];
+    // return array;
 }
 
 // Here is the test for sum(); uncomment it to run it
-testSum(4, 7);
+// testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -31,13 +31,13 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a,b) { //eslint-disable-line
     var product = a*b;
-    var sentence = 'the product of ' + a + ' and ' + b + ' is ' + product + '.';
+    var sentence = 'The product of ' + a + ' and ' + b + ' is ' + product + '.';
     var array2 = [product, sentence];
     return array2;
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+ testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -53,9 +53,21 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
-function sumAndMultiply() { //eslint-disable-line
-
+function sumAndMultiply(a,b,c) { //eslint-disable-line
+    var sumThing = sum(a,b);
+    sumThing = parseInt(sumThing, 10);
+    var sumThing2 = sum(sumThing,c);
+    var mul1 = multiply(a,b);
+    mul1 = parseInt(mul1, 10);
+    var mul2 = multiply (mul1,c);
+    var thirdElement = (a + ' and ' + b + ' and ' + c + ' sum to ' + sumThing2 + '.');
+    var fourthElement = ('The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + mul2 + '.');
+    var array3 = [sumThing2, mul2, thirdElement, fourthElement];
+    return array3
 }
+// console.log(sumThing);
+
+sumAndMultiply(4,7,5);
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
 // testSumAndMultiply(4,7,5);

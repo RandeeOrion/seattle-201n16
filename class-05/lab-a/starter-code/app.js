@@ -10,9 +10,9 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sum(a, b) { 
     var addition = a+b;
-    // var sent = 'The sum of ' + a + ' and ' + b + ' is ' + addition + '.';
-    // var array = [addition, sent];
-    // return array;
+    var sent = 'The sum of ' + a + ' and ' + b + ' is ' + addition + '.';
+    var array = [addition, sent];
+    return array;
 }
 
 // Here is the test for sum(); uncomment it to run it
@@ -55,11 +55,17 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sumAndMultiply(a,b,c) { //eslint-disable-line
     var sumThing = sum(a,b);
-    sumThing = parseInt(sumThing, 10);
+    console.log(sumThing);
+    sumThing = parseInt(sumThing[0], 10);
+    
     var sumThing2 = sum(sumThing,c);
+   sumThing2 = sumThing2[0];
+   console.log(sumThing2);
+
     var mul1 = multiply(a,b);
-    mul1 = parseInt(mul1, 10);
+    mul1 = parseInt(mul1[0], 10);
     var mul2 = multiply (mul1,c);
+    mul2 = mul2[0];
     var thirdElement = (a + ' and ' + b + ' and ' + c + ' sum to ' + sumThing2 + '.');
     var fourthElement = ('The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + mul2 + '.');
     var array3 = [sumThing2, mul2, thirdElement, fourthElement];
@@ -67,7 +73,7 @@ function sumAndMultiply(a,b,c) { //eslint-disable-line
 }
 // console.log(sumThing);
 
-sumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
 // testSumAndMultiply(4,7,5);
@@ -87,8 +93,9 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 var testArray = [2, 3, 4]; //eslint-disable-line
 
-function sumArray() { //eslint-disable-line
-
+function sumArray(array) { //eslint-disable-line
+    var shotInTheDark = testArray + [i];
+    console.log(shotInTheDark);
 }
 
 // Here is the test for sumArray(); uncomment it to run it
